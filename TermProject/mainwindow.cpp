@@ -251,7 +251,13 @@ void MainWindow::changes_applicable()
 
 void MainWindow::enableRedoUndo()
 {
-   //
+    //Redo
+    if(current_index == static_cast<int>(audio_stack.size()-1)){ ui->actionRedo->setEnabled(false);}
+    else{ui->actionRedo->setEnabled(true);}
+
+    //Undo
+    if(current_index > 0){ui->actionUndo->setEnabled(true);}
+    else{ui->actionUndo->setEnabled(false);}
 }
 
 void repeat(){
@@ -262,4 +268,12 @@ void repeat(){
         for(auto sample: interval_vec){ tempVec.push_back(sample);}
     }
     interval_vec = tempVec;
+}
+
+std::vector<float> change_speed(const std::vector<float>& wav, float rate){
+    std::vector<float> vec;
+    int L = wav.size();
+    int numSamples = L/rate;
+    float incremenet = rate;
+    float previous_phase = 0;
 }
