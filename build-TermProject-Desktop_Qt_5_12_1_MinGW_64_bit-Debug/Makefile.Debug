@@ -246,26 +246,9 @@ debug/moc_mainwindow.cpp: ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/QStandardPaths \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/qstandardpaths.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/QImageReader \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimagereader.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimageiohandler.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qplugin.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qpointer.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qjsonobject.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qjsonvalue.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qfactoryinterface.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/QImageWriter \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimagewriter.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/QPixmap \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QSpinBox \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qspinbox.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qvalidator.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qregularexpression.h \
 		C:/opencv/build/include/opencv2/opencv.hpp \
 		C:/opencv/build/include/opencv2/opencv_modules.hpp \
 		C:/opencv/build/include/opencv2/core.hpp \
@@ -565,26 +548,9 @@ debug/main.o: ../TermProject/main.cpp ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/QStandardPaths \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/qstandardpaths.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/QImageReader \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimagereader.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimageiohandler.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qplugin.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qpointer.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qjsonobject.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qjsonvalue.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qfactoryinterface.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/QImageWriter \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimagewriter.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/QPixmap \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QSpinBox \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qspinbox.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qvalidator.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qregularexpression.h \
 		C:/opencv/build/include/opencv2/opencv.hpp \
 		C:/opencv/build/include/opencv2/opencv_modules.hpp \
 		C:/opencv/build/include/opencv2/core.hpp \
@@ -729,6 +695,8 @@ debug/main.o: ../TermProject/main.cpp ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QDialog \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtCore/qeventloop.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/qguiapplication.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/qinputmethod.h
@@ -864,26 +832,9 @@ debug/mainwindow.o: ../TermProject/mainwindow.cpp ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/QStandardPaths \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/qstandardpaths.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/QImageReader \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimagereader.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimageiohandler.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qplugin.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qpointer.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qjsonobject.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qjsonvalue.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qfactoryinterface.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/QImageWriter \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qimagewriter.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QMessageBox \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qmessagebox.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/QPixmap \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QSpinBox \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qspinbox.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtGui/qvalidator.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtCore/qregularexpression.h \
 		C:/opencv/build/include/opencv2/opencv.hpp \
 		C:/opencv/build/include/opencv2/opencv_modules.hpp \
 		C:/opencv/build/include/opencv2/core.hpp \
@@ -1027,8 +978,13 @@ debug/mainwindow.o: ../TermProject/mainwindow.cpp ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtCore/QDebug \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QDialog \
 		ui_mainwindow.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QAction \
+		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qaction.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qapplication.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtCore/qcoreapplication.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtCore/qeventloop.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/qguiapplication.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtGui/qinputmethod.h \
@@ -1036,11 +992,10 @@ debug/mainwindow.o: ../TermProject/mainwindow.cpp ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qformlayout.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QFrame \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QGridLayout \
+		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QMenu \
+		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qmenu.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QMenuBar \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qmenu.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qaction.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qactiongroup.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QSlider \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qslider.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qabstractslider.h \
@@ -1048,7 +1003,13 @@ debug/mainwindow.o: ../TermProject/mainwindow.cpp ../TermProject/mainwindow.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qstatusbar.h \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QToolBar \
 		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/qtoolbar.h \
-		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QWidget
+		C:/Qt/5.12.1/mingw73_64/include/QtWidgets/QWidget \
+		../TermProject/sndfile.h \
+		../TermProject/sndfile.hh \
+		C:/Qt/5.12.1/mingw73_64/include/QtMultimedia/QSound \
+		C:/Qt/5.12.1/mingw73_64/include/QtMultimedia/qsound.h \
+		C:/Qt/5.12.1/mingw73_64/include/QtCore/QChar \
+		C:/Qt/5.12.1/mingw73_64/include/QtCore/QFile
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\TermProject\mainwindow.cpp
 
 debug/qrc_sound.o: debug/qrc_sound.cpp 

@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QFrame>
@@ -17,6 +18,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
@@ -30,6 +32,10 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionNew;
+    QAction *actionSave_As;
+    QAction *actionUndo;
+    QAction *actionRedo;
     QWidget *centralWidget;
     QWidget *layoutWidget;
     QFormLayout *formLayout;
@@ -47,6 +53,7 @@ public:
     QPushButton *Snare;
     QFrame *line;
     QMenuBar *menuBar;
+    QMenu *menuNew;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -55,6 +62,14 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(657, 374);
+        actionNew = new QAction(MainWindow);
+        actionNew->setObjectName(QString::fromUtf8("actionNew"));
+        actionSave_As = new QAction(MainWindow);
+        actionSave_As->setObjectName(QString::fromUtf8("actionSave_As"));
+        actionUndo = new QAction(MainWindow);
+        actionUndo->setObjectName(QString::fromUtf8("actionUndo"));
+        actionRedo = new QAction(MainWindow);
+        actionRedo->setObjectName(QString::fromUtf8("actionRedo"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         layoutWidget = new QWidget(centralWidget);
@@ -140,6 +155,8 @@ public:
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 657, 21));
+        menuNew = new QMenu(menuBar);
+        menuNew->setObjectName(QString::fromUtf8("menuNew"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -147,6 +164,12 @@ public:
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
+
+        menuBar->addAction(menuNew->menuAction());
+        menuNew->addAction(actionNew);
+        menuNew->addAction(actionSave_As);
+        menuNew->addAction(actionUndo);
+        menuNew->addAction(actionRedo);
 
         retranslateUi(MainWindow);
 
@@ -156,12 +179,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionNew->setText(QApplication::translate("MainWindow", "New", nullptr));
+        actionSave_As->setText(QApplication::translate("MainWindow", "Save As", nullptr));
+        actionUndo->setText(QApplication::translate("MainWindow", "Undo", nullptr));
+        actionRedo->setText(QApplication::translate("MainWindow", "Redo", nullptr));
         label->setText(QApplication::translate("MainWindow", "Volume", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Progress", nullptr));
         pauseButton->setText(QApplication::translate("MainWindow", "Pause", nullptr));
         stopButton->setText(QApplication::translate("MainWindow", "Stop", nullptr));
         playButton->setText(QApplication::translate("MainWindow", "Play", nullptr));
         Snare->setText(QApplication::translate("MainWindow", "Snare", nullptr));
+        menuNew->setTitle(QApplication::translate("MainWindow", "Kizyl Beatz", nullptr));
     } // retranslateUi
 
 };
