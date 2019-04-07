@@ -50,9 +50,7 @@ std::vector<std::vector<float>> audio_stack;
 //Sampling rate
 const int SR = 44100;
 const int T = 1/SR;
-int repeat_count = 0; //number of repeats
-bool repeatFlag = false;
-
+int repeat_count = 0; //number of repeat
 float time_constant = 5;
 bool fade_in = true;
 bool fade_out_checked = false;
@@ -65,14 +63,13 @@ float amplitude = 1;
 void CreateInterval();
 void CreateTempFile(QString qs);
 void showMessage(QString qs);
+void MakeFileNames(); 
 //void CreateFile();
 //void CreateSinWave(float amp, float freq);
-//void RingModulation(std::vector<float> sinevec);
 //void ChangeSpeed();
-//void FadeIn();
-//void FadeOut();
 //void Amplify();
 //void Repeat();
+//void repeat();
 
 // ---------- Audio Mod Definitions -----------//
 
@@ -155,6 +152,10 @@ void CreateTempFile(QString qs)
 //    outfile.write(&temp_vec[0], temp_vec.size());
 //}
 
+void MakeFileNames(){
+    
+}
+
 // ---------- ui functionalities -----------//
 
 
@@ -202,9 +203,6 @@ void MainWindow::on_durationChanged(qint64 position){
 //replace with button,triggered from instrument graphic
 void MainWindow::on_Snare_clicked()
 {
-    //snare = new QMediaPlayer;
-    //Play snare sound
-    //snare->setMedia(QUrl("qrc:/sourceres/track/Snares1.wav"));
     snare->setMedia(QUrl::fromLocalFile("/Users/Izyl/Desktop/cmpt365/TermProject/Snares1.wav"));
 
     if(snare->state() == QMediaPlayer::PlayingState){snare->setPosition(0);}
@@ -221,4 +219,47 @@ void MainWindow::on_actionRedo_triggered()
 {
     current_index++;
     temp_vec = audio_stack.at(current_index);
+}
+
+void MainWindow::on_reverse_clicked(bool checked)
+{
+    //changed_something();
+    if(checked){reverseFlag = true;}
+    else{reverseFlag = false;}
+}
+
+void reverse(){
+    std::vector<float> tempVec;
+    for(int i = interval_vec.size()-1; i> -1; --i){
+       tempVec.push_back(interval_vec.at(i));
+    }
+    interval_vec = tempVec;
+}
+
+void MainWindow::on_checkBox_clicked(bool checked)
+{
+    //changed_something();
+    if(checked){repeatFlag = true;}
+    else{repeatFlag = false;}
+}
+
+void MainWindow::changes_applicable()
+{
+    changed = true;
+    tested = false;
+}
+
+void MainWindow::enableRedoUndo()
+{
+   //
+}
+
+void repeat(){
+    std::vector<float> tempVec;
+    //for testing, repeat 2
+    repeat_count = 2;
+    for(int i = 0; i < repeat_count; ++i){
+        for(auto sample: interval_vec){ tempVec.push_back(sample);}
+    }
+    interval_vec = tempVec;
 }

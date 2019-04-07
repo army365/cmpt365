@@ -56,16 +56,21 @@ private slots:
     void on_Snare_clicked();
 
     //Audio Format
-
     void on_actionUndo_triggered();
-
     void on_actionRedo_triggered();
-
+    void on_reverse_clicked(bool check);
+    void on_checkBox_clicked(bool checked);
 
 private:
     Ui::MainWindow *ui;
     QMediaPlayer* player;
     QMediaPlayer* snare;
+    bool reverseFlag;
+    bool repeatFlag;
+    bool changed = false;
+    bool tested = false;
+    void changes_applicable();
+    void enableRedoUndo();
 };
 
 #endif // MAINWINDOW_H
