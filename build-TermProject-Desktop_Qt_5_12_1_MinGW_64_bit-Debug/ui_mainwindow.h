@@ -11,10 +11,18 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFormLayout>
+#include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,25 +30,120 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QWidget *centralWidget;
+    QWidget *layoutWidget;
+    QFormLayout *formLayout;
+    QGridLayout *gridLayout_2;
+    QLabel *label;
+    QSlider *sliderVolume;
+    QLabel *label_2;
+    QVBoxLayout *verticalLayout;
+    QSlider *sliderProgress;
+    QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *pauseButton;
+    QPushButton *stopButton;
+    QPushButton *playButton;
+    QPushButton *Snare;
+    QFrame *line;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
-    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(657, 374);
+        centralWidget = new QWidget(MainWindow);
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        layoutWidget = new QWidget(centralWidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(150, 190, 352, 114));
+        formLayout = new QFormLayout(layoutWidget);
+        formLayout->setSpacing(6);
+        formLayout->setContentsMargins(11, 11, 11, 11);
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
+        formLayout->setContentsMargins(0, 0, 0, 0);
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        label = new QLabel(layoutWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout_2->addWidget(label, 1, 0, 1, 1);
+
+        sliderVolume = new QSlider(layoutWidget);
+        sliderVolume->setObjectName(QString::fromUtf8("sliderVolume"));
+        sliderVolume->setValue(99);
+        sliderVolume->setOrientation(Qt::Horizontal);
+
+        gridLayout_2->addWidget(sliderVolume, 0, 0, 1, 1);
+
+
+        formLayout->setLayout(0, QFormLayout::LabelRole, gridLayout_2);
+
+        label_2 = new QLabel(layoutWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, label_2);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(6);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        sliderProgress = new QSlider(layoutWidget);
+        sliderProgress->setObjectName(QString::fromUtf8("sliderProgress"));
+        sliderProgress->setOrientation(Qt::Horizontal);
+
+        verticalLayout->addWidget(sliderProgress);
+
+        gridLayout = new QGridLayout();
+        gridLayout->setSpacing(6);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        pauseButton = new QPushButton(layoutWidget);
+        pauseButton->setObjectName(QString::fromUtf8("pauseButton"));
+
+        horizontalLayout->addWidget(pauseButton);
+
+        stopButton = new QPushButton(layoutWidget);
+        stopButton->setObjectName(QString::fromUtf8("stopButton"));
+
+        horizontalLayout->addWidget(stopButton);
+
+        playButton = new QPushButton(layoutWidget);
+        playButton->setObjectName(QString::fromUtf8("playButton"));
+
+        horizontalLayout->addWidget(playButton);
+
+
+        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
+
+
+        verticalLayout->addLayout(gridLayout);
+
+
+        formLayout->setLayout(2, QFormLayout::FieldRole, verticalLayout);
+
+        Snare = new QPushButton(centralWidget);
+        Snare->setObjectName(QString::fromUtf8("Snare"));
+        Snare->setGeometry(QRect(20, 20, 80, 22));
+        line = new QFrame(centralWidget);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setGeometry(QRect(20, 60, 621, 16));
+        line->setLineWidth(2);
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+        MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 657, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        MainWindow->addToolBar(mainToolBar);
-        centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        MainWindow->setCentralWidget(centralWidget);
+        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -53,6 +156,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Volume", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "Progress", nullptr));
+        pauseButton->setText(QApplication::translate("MainWindow", "Pause", nullptr));
+        stopButton->setText(QApplication::translate("MainWindow", "Stop", nullptr));
+        playButton->setText(QApplication::translate("MainWindow", "Play", nullptr));
+        Snare->setText(QApplication::translate("MainWindow", "Snare", nullptr));
     } // retranslateUi
 
 };

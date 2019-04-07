@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += core gui multimedia
+QT       += core
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,7 +17,9 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    sndfile.h \
+    sndfile.hh
 
 FORMS    += mainwindow.ui
 DEFINES += QT_NO_VERSION_TAGGING
@@ -29,4 +33,12 @@ LIBS += C:\opencv\build\install\x64\mingw\bin\libopencv_imgcodecs400.dll
 LIBS += C:\opencv\build\install\x64\mingw\bin\libopencv_imgproc400.dll
 LIBS += C:\opencv\build\install\x64\mingw\bin\libopencv_features2d400.dll
 LIBS += C:\opencv\build\install\x64\mingw\bin\libopencv_calib3d400.dll
+
+macx: LIBS += -L$$PWD/./ -lsndfile
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.
+
+RESOURCES += \
+    sound.qrc
 

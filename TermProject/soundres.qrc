@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/drum">
+        <file>Drums/Snares/Snares1.wav</file>
+    </qresource>
+    <qresource prefix="/test">
+        <file>alien-spaceship_daniel_simion.wav</file>
+    </qresource>
+</RCC>
