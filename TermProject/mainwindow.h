@@ -10,11 +10,8 @@
 #include <QPushButton>
 #include <QFileDialog>
 #include <QStandardPaths>
-#include <QImageReader>
-#include <QImageWriter>
 #include <QMessageBox>
 #include <QPixmap>
-#include <QSpinBox>
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc.hpp>
@@ -43,6 +40,9 @@ public:
 
 private slots:
 
+    //open
+
+
     //should play the tracks together
     void on_playButton_clicked();
     void on_stopButton_clicked();
@@ -56,6 +56,11 @@ private slots:
     void on_Snare_clicked();
 
     //Audio Format
+
+    void on_actionUndo_triggered();
+
+    void on_actionRedo_triggered();
+
 
 private:
     Ui::MainWindow *ui;
