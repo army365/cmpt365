@@ -24,11 +24,6 @@ MainWindow::MainWindow(QWidget *parent) :
         connect(snare, &QMediaPlayer::durationChanged, this, &MainWindow::on_durationChanged);
 }
 
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
 // ---------- Global variables -----------//
 
 const int kcoef = 1024;
@@ -50,7 +45,12 @@ std::vector<std::vector<float>> audio_stack;
 //Sampling rate
 const int SR = 44100;
 const int T = 1/SR;
+int repeat_count = 0;
 
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
 
 // ---------- ui functionalities -----------//
 void MainWindow::on_playButton_clicked()
