@@ -4,12 +4,15 @@
         <file>drums.js</file>
         <file>three.js</file>
         <file>deployment.pri</file>
-        <file>english-parquet-dark.jpg</file>
         <file>Wood_011_basecolor.jpg</file>
         <file>crash.mp3</file>
         <file>kick.mp3</file>
         <file>openhat.mp3</file>
         <file>snare.mp3</file>
         <file>wave.wav</file>
+        <file>Bass-Drum-3.wav</file>
+        <file>Crash-Cymbal-2.wav</file>
+        <file>Ensoniq-ESQ-1-Snare-2.wav</file>
+        <file>Open-Hi-Hat-5.wav</file>
     </qresource>
 </RCC>

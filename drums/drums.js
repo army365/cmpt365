@@ -1,4 +1,5 @@
 Qt.include("three.js")
+Qt.include("TweenMax.js")
 
 var scene, camera, renderer, light;
 var kick, snare, crash, hihat;
@@ -131,7 +132,7 @@ function initializeGL(canvas) {
     crash.position.x = 43;
     crash.position.z = 15;
     crash.position.y = 40;
-    crash.rotation.x = Math.PI/8;
+    crash.rotation.x = Math.PI / 8;
     crash.castShadow = true;
     crash.receiveShadow = true;
     scene.add(crash);
@@ -178,6 +179,10 @@ function render() {
 //    camera.updateProjectionMatrix();
     camera.lookAt(new THREE.Vector3(0,0,-20));
     renderer.render( scene, camera );
+    snare.rotation.x = 0;
+    hihat.rotation.x = 0;
+    kick.rotation.x = Math.PI / 2;
+    crash.rotation.x = Math.PI / 8;
 }
 
 function ground() {
@@ -213,16 +218,16 @@ function ground() {
 function getKey(key) {
     switch(key){
     case "KeyG":
-        snare.rotation.x += Math.PI;
+        snare.rotation.x = Math.PI / 16;
         break;
     case "KeyH":
-        hihat.rotation.x += Math.PI;
+        hihat.rotation.x = Math.PI / 16;
         break;
     case "KeyB":
-        kick.rotation.x += Math.PI;
+        kick.rotation.x = Math.PI / 3;
         break;
     case "KeyK":
-        crash.rotation.x += Math.PI;
+        crash.rotation.x = Math.PI / 16;
         break;
     }
 }

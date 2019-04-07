@@ -34,34 +34,29 @@ ApplicationWindow {
 
         Audio {
             id: kick
-            source: "kick.mp3"
+            source: "Bass-Drum-3.wav"
             autoLoad: true
         }
 
         Audio {
             id: snare
-            source: "snare.mp3"
+            source: "Ensoniq-ESQ-1-Snare-2.wav"
             autoLoad: true
         }
 
         Audio {
             id: hihat
-            source: "openhat.mp3"
+            source: "Open-Hi-Hat-5.wav"
             autoLoad: true
         }
 
         Audio {
             id: crash
-            source: "crash.mp3"
+            source: "Crash-Cymbal-2.wav"
             autoLoad: true
         }
 
         Keys.onPressed: {
-//            if(kick.playbackState === 1) kick.stop();
-//            if(snare.playbackState === 1) snare.stop();
-//            if(hihat.playbackState === 1) hihat.stop();
-//            if(crash.playbackState === 1) crash.stop();
-
             if(event.key === Qt.Key_B) {
                 GLCode.getKey("KeyB");
                 if(kick.playbackState === 1) kick.stop();

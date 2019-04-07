@@ -2,7 +2,8 @@ TEMPLATE = app
 
 QT += qml quick widgets
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    drumset.cpp
 
 OTHER_FILES += main.qml \
                drums.js \
@@ -27,3 +28,6 @@ QML_IMPORT_PATH =
 #target.path = $$[QT_INSTALL_EXAMPLES]/canvas3d/threejs/$$TARGET
 #INSTALLS += target
 include(deployment.pri)
+
+HEADERS += \
+    drumset.h
