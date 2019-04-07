@@ -2,15 +2,6 @@ Qt.include("three.js")
 
 var scene, camera, renderer, light;
 var kick, snare, crash, hihat;
-var drumSamples = {
-    kick: 'http://brokensquare.com/Code/assets/drum-samples/kick.mp3',
-    snare: 'http://brokensquare.com/Code/assets/drum-samples/snare.mp3',
-    closedhat: 'http://brokensquare.com/Code/assets/drum-samples/closedhat.mp3',
-    openhat: 'http://brokensquare.com/Code/assets/drum-samples/openhat.mp3',
-    crash: 'http://brokensquare.com/Code/assets/drum-samples/crash.mp3'
-};
-
-
 
 function initializeGL(canvas) {
     // Scene initialization
@@ -20,9 +11,6 @@ function initializeGL(canvas) {
     // Camera initialization
     camera = new THREE.PerspectiveCamera( 75, canvas.innerWidth / canvas.innerHeight, 10, 600 );
     camera.position.z = 90;
-//    camera.updateProjectionMatrix();
-//    scene.add( camera );
-//    camera.position.x = -10;
     camera.position.y = 60;
 
     // Light initialization

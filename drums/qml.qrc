@@ -10,5 +10,6 @@
         <file>kick.mp3</file>
         <file>openhat.mp3</file>
         <file>snare.mp3</file>
+        <file>wave.wav</file>
     </qresource>
 </RCC>
