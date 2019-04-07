@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>drums.js</file>
+        <file>three.js</file>
+        <file>deployment.pri</file>
+        <file>english-parquet-dark.jpg</file>
+        <file>Wood_011_basecolor.jpg</file>
+        <file>crash.mp3</file>
+        <file>kick.mp3</file>
+        <file>openhat.mp3</file>
+        <file>snare.mp3</file>
+    </qresource>
+</RCC>
