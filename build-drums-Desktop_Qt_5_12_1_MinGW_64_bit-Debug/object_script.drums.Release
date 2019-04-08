@@ -1,0 +1,12 @@
+release/main.o
+release/soundevent.o
+release/mainwindow.o
+release/playback.o
+release/finalserializer.o
+release/soundeffectwidget.o
+release/track.o
+release/qrc_qml.o
+release/moc_mainwindow.o
+release/moc_track.o
+release/moc_soundeffectwidget.o
+release/moc_playback.o

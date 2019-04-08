@@ -1,5 +1,12 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>example.js</file>
+        <file>three.js</file>
+        <file>circuit_pattern.png</file>
+        <file>Cloth.js</file>
+        <file>grasslight-big.jpg</file>
+        <file>deployment.pri</file>
+        <file>../drums/TweenMax.min.js</file>
     </qresource>
 </RCC>

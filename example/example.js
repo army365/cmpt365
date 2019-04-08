@@ -82,24 +82,18 @@ var pos;
 var rotate = true;
 
 function initializeGL(canvas) {
-
     // scene
-
     scene = new THREE.Scene();
-
     scene.fog = new THREE.Fog( 0xcce0ff, 500, 10000 );
 
     // camera
-
     camera = new THREE.PerspectiveCamera( 30, canvas.width / canvas.height, 1, 10000 );
     camera.position.y = 50;
     camera.position.z = 1500;
     scene.add( camera );
 
     // lights
-
     var light, materials;
-
     scene.add( new THREE.AmbientLight( 0x666666 ) );
 
     light = new THREE.DirectionalLight( 0xdfebff, 1.75 );
@@ -125,7 +119,7 @@ function initializeGL(canvas) {
     // cloth material
 
     var loader = new THREE.TextureLoader();
-    var clothTexture = loader.load( 'qrc:/textures/patterns/circuit_pattern.png' );
+    var clothTexture = loader.load( 'qrc:/circuit_pattern.png' );
     clothTexture.wrapS = clothTexture.wrapT = THREE.RepeatWrapping;
     clothTexture.anisotropy = 16;
 
@@ -169,7 +163,7 @@ function initializeGL(canvas) {
 
     // ground
 
-    var groundTexture = loader.load( "qrc:/textures/terrain/grasslight-big.jpg" );
+    var groundTexture = loader.load( "qrc:/grasslight-big.jpg" );
     groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
     groundTexture.repeat.set( 25, 25 );
     groundTexture.anisotropy = 16;
@@ -262,7 +256,7 @@ function toggleWind() {
 
 function toggleBall() {
 
-    sphere.visible = !sphere.visible;
+//    sphere.visible = !sphere.visible;
 
 }
 

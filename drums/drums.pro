@@ -1,9 +1,16 @@
 TEMPLATE = app
 
 QT += qml quick widgets
+QT += core gui
+QT += multimedia multimediawidgets
 
 SOURCES += main.cpp \
-    drumset.cpp
+    soundevent.cpp \
+    mainwindow.cpp \
+    playback.cpp \
+    finalserializer.cpp \
+    soundeffectwidget.cpp \
+    track.cpp
 
 OTHER_FILES += main.qml \
                drums.js \
@@ -30,4 +37,14 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
-    drumset.h
+    mainwindow.h \
+    canserialize.h \
+    soundevent.h \
+    track.h \
+    serializer.h \
+    soundeffectwidget.h \
+    playback.h \
+    finalserializer.h
+
+FORMS += \
+    mainwindow.ui

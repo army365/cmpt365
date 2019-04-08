@@ -1,0 +1,12 @@
+debug/main.o
+debug/soundevent.o
+debug/mainwindow.o
+debug/playback.o
+debug/finalserializer.o
+debug/soundeffectwidget.o
+debug/track.o
+debug/qrc_qml.o
+debug/moc_mainwindow.o
+debug/moc_track.o
+debug/moc_soundeffectwidget.o
+debug/moc_playback.o

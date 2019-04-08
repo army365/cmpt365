@@ -14,5 +14,13 @@
         <file>Crash-Cymbal-2.wav</file>
         <file>Ensoniq-ESQ-1-Snare-2.wav</file>
         <file>Open-Hi-Hat-5.wav</file>
+        <file>res/icons/play.png</file>
+        <file>res/icons/record.png</file>
+        <file>res/icons/stop.png</file>
+        <file>res/sounds/crash.wav</file>
+        <file>res/sounds/hihat.wav</file>
+        <file>res/sounds/kick.wav</file>
+        <file>res/sounds/snare.wav</file>
+        <file>res/resource.qrc</file>
     </qresource>
 </RCC>

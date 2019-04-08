@@ -1,5 +1,4 @@
 Qt.include("three.js")
-Qt.include("TweenMax.js")
 
 var scene, camera, renderer, light;
 var kick, snare, crash, hihat;
