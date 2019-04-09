@@ -102,7 +102,8 @@ release/qrc_qml.cpp: ../example/qml.qrc \
 		../example/example.js \
 		../example/Cloth.js \
 		../example/main.qml \
-		../example/deployment.pri
+		../example/deployment.pri \
+		../drums/TweenMax.min.js
 	C:\Qt\5.12.1\mingw73_64\bin\rcc.exe -name qml ..\example\qml.qrc -o release\qrc_qml.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h

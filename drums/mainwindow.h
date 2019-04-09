@@ -3,10 +3,11 @@
 
 #include <memory>
 
-#include <QMainWindow>
+#include <QMainWindow> // remove
 #include <QVector>
 #include <QThread>
 #include <QTimer>
+#include <QObject>
 
 #include "track.h"
 #include "serializer.h"
@@ -15,10 +16,10 @@ class SoundEffectWidget;
 class playback;
 
 namespace Ui {
-class MainWindow;
+class MainWindow; // remove
 }
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow // modify
 {
     Q_OBJECT
 
@@ -47,7 +48,7 @@ private:
     QString formatTime(long ms);
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui; // remove
     Track mTrack;
     QVector<SoundEffectWidget*> mSoundEffectWidgets;
     playback* mplayback;

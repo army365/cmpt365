@@ -6,7 +6,7 @@ var kick, snare, crash, hihat;
 function initializeGL(canvas) {
     // Scene initialization
     scene = new THREE.Scene();
-    scene.fog = new THREE.Fog(0x222222, 20, 600);
+//    scene.fog = new THREE.Fog(0x222222, 20, 600);
 
     // Camera initialization
     camera = new THREE.PerspectiveCamera( 75, canvas.innerWidth / canvas.innerHeight, 10, 600 );
@@ -18,7 +18,6 @@ function initializeGL(canvas) {
     scene.add(ambientLight);
 
     var hemiLight = new THREE.HemisphereLight( 0xFFF7EB, 0xEBF7FD, 0.3 );
-    //hemiLight.color.setRGB(0.75,0.8,0.95);
     hemiLight.position.set( 0, 100, 0 );
     scene.add( hemiLight );
 
@@ -45,10 +44,10 @@ function initializeGL(canvas) {
 
     // Drums initialization
     var drumMaterial = new THREE.MeshPhongMaterial({
-        color: 0xFF0000,
-        //specular: 0x009900,
-        shininess: 550,
-        emissive: 0xFF0000,
+        color: 0xd22442,
+        specular: 0x4a4646,
+        shininess: 74,
+        emissive: 0x48180a,
         emissiveIntensity: 0.5,
         transparent: true,
         opacity: 0.8,
@@ -71,6 +70,8 @@ function initializeGL(canvas) {
     var front = new THREE.Mesh(frontGeometry, drumFrontMaterial);
     //front.position.z = 18;
     front.position.y = 15;
+    front.castShadow = true;
+    front.receiveShadow = true;
     kick.add(front);
     kick.position.x = 20;
     kick.position.y = 20;
@@ -84,15 +85,15 @@ function initializeGL(canvas) {
 
     var frontGeometry2 = new THREE.CylinderGeometry( 9, 9, 1, 50 );
     var front2 = new THREE.Mesh(frontGeometry2, drumFrontMaterial);
-//    front.position.z = 18;
     front2.position.y = 4.5;
+    front2.castShadow = true;
+    front2.receiveShadow = true;
     snare.add(front2);
     snare.position.x = -20;
     snare.position.z = 20;
     snare.position.y = 25;
     snare.castShadow = true;
     snare.receiveShadow = true;
-    //kick.rotation.x = Math.PI/2;
     scene.add(snare);
 
     // Pedal initialization
@@ -116,13 +117,12 @@ function initializeGL(canvas) {
 
     // Cymbal initialization
     var cymbalMaterial = new THREE.MeshPhongMaterial({
-        color: 0xF5D061,
-        //specular: 0x009900,
-        shininess: 550,
-        emissive: 0xE6AF2E,
+        color: 0xcaa347,
+        specular: 0x726216,
+        shininess: 50,
+        emissive: 0x593f0d,
         emissiveIntensity: 0.5,
-        transparent: true,
-        opacity: 0.8
+        transparent: false
     });
 
     var geometry3 = new THREE.CylinderGeometry( 13, 13, 1, 50 );
@@ -141,6 +141,8 @@ function initializeGL(canvas) {
 
     var bottomhat = new THREE.Mesh(geometry4, cymbalMaterial);
     bottomhat.position.y = 2;
+    bottomhat.castShadow = true;
+    bottomhat.receiveShadow = true;
     hihat.add(bottomhat);
     hihat.position.x = -4;
     hihat.position.z = 10;
@@ -174,9 +176,7 @@ function resizeGL(canvas) {
 }
 
 function render() {
-    camera.lookAt( scene.position );
-//    camera.updateProjectionMatrix();
-    camera.lookAt(new THREE.Vector3(0,0,-20));
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
     renderer.render( scene, camera );
     snare.rotation.x = 0;
     hihat.rotation.x = 0;
@@ -190,17 +190,8 @@ function ground() {
     groundTexture.wrapS = groundTexture.wrapT = THREE.RepeatWrapping;
     groundTexture.anisotropy = 16;
 
-//    var clothMaterial = new THREE.MeshPhongMaterial(
-//                { alphaTest: 0.5,
-//                    specular: 0x030303,
-//                    map: clothTexture,
-//                    side: THREE.DoubleSide } );
     var geometry = new THREE.PlaneGeometry( 600, 600, 1, 1 );
-//    var material = new THREE.MeshPhongMaterial({
-//        color: 0xFFFFFF,
-//        shininess: 300,
-//        shading: THREE.SmoothShading
-//    });
+
     var material = new THREE.MeshPhongMaterial({
         alphaTest: 0.5,
         specular: 0x030303,
@@ -225,7 +216,7 @@ function getKey(key) {
     case "KeyB":
         kick.rotation.x = Math.PI / 3;
         break;
-    case "KeyK":
+    case "KeyV":
         crash.rotation.x = Math.PI / 16;
         break;
     }

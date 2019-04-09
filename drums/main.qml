@@ -8,8 +8,8 @@ import "drums.js" as GLCode
 ApplicationWindow {
     id: mainview
     title: qsTr("Kizyl Beatz")
-    width: 1280
-    height: 768
+    width: 2500
+    height: 1500
     visible: true
 
     Canvas3D {
@@ -27,6 +27,53 @@ ApplicationWindow {
         onResizeGL: {
             GLCode.resizeGL(canvas3d);
         }
+    }
+
+    Button {
+        id: saveButton
+        anchors.left: parent.left
+        width: parent.width / 2
+        text: "Save"
+
+        onClicked: console.log("save - call c++ object")
+    }
+
+    Button {
+        id: loadButton
+        anchors.left: saveButton.right
+        width: parent.width / 2
+        text: "Load"
+
+        onClicked: console.log("load - call c++ object")
+    }
+
+    Button {
+        id: playButton
+        anchors.bottom: parent.bottom
+        width: parent.width / 3
+        text: "Play"
+
+        onClicked: console.log("play - call c++ object")
+    }
+
+    Button {
+        id: recordButton
+        anchors.bottom: parent.bottom
+        anchors.left: playButton.right
+        width: parent.width / 3
+        text: "Record"
+
+        onClicked: console.log("record - call c++ object")
+    }
+
+    Button {
+        id: stopButton
+        anchors.bottom: parent.bottom
+        anchors.left: recordButton.right
+        width: parent.width / 3
+        text: "Stop"
+
+        onClicked: console.log("stop - call c++ object")
     }
 
     Item {
@@ -72,8 +119,8 @@ ApplicationWindow {
                 if(hihat.playbackState === 1) hihat.stop();
                 hihat.play();
             }
-            if(event.key === Qt.Key_K) {
-                GLCode.getKey("KeyK");
+            if(event.key === Qt.Key_V) {
+                GLCode.getKey("KeyV");
                 if(crash.playbackState === 1) crash.stop();
                 crash.play();
             }
